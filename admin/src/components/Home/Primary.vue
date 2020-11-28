@@ -29,14 +29,15 @@ export default class Primary extends Vue {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .primary {
-  height: 100%;
+  height: calc(100% - 60px);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 30px;
 }
 .covers {
   height: 90%;
-  width: 30%;
+  width: 35%;
   background: #eee;
   border-radius: 10px;
 }

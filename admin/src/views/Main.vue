@@ -7,7 +7,7 @@
       <el-header style="padding: 0 30px">
         <Header />
       </el-header>
-      <el-main style="padding: 30px">
+      <el-main style="padding: 0">
         <router-view />
       </el-main>
       <!-- <el-footer>
@@ -33,11 +33,12 @@ export default class Home extends Vue {}
 
 <style scoped>
 .container {
-  padding: 0 250px;
-  min-height: 100vh;
+  padding: 0 100px;
+  height: 100vh;
   background-color: #f6f9fc;
 }
 .content {
   background-color: #fff;
+  box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.08);
 }
 </style>
