@@ -37,6 +37,11 @@ export default class Home extends Vue {}
   height: 100vh;
   background-color: #f6f9fc;
 }
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0;
+  }
+}
 .content {
   background-color: #fff;
   box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.08);
