@@ -1,13 +1,14 @@
 <template>
-  <el-container class="container">
+  <el-container>
     <!-- <el-asider width="200px">
       menu
     </el-asider> -->
-    <el-container class="content">
-      <el-header style="padding: 0 30px">
+    <el-container>
+      <el-header class="el-header">
         <Header />
       </el-header>
-      <el-main style="padding: 0">
+      <div class="banner"><img src="../assets/main/banner.jpg" alt="" /></div>
+      <el-main class="el-main">
         <router-view />
       </el-main>
       <!-- <el-footer>
@@ -31,19 +32,29 @@ import Footer from "@/components/Footer.vue";
 export default class Home extends Vue {}
 </script>
 
-<style scoped>
-.container {
-  padding: 0 100px;
-  height: 100vh;
-  background-color: #f6f9fc;
+<style lang="scss" scoped>
+.el-header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background: #fff;
+  padding: 0 30px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.06);
 }
-@media screen and (max-width: 1200px) {
-  .container {
-    padding: 0;
+.el-main {
+  padding: 0;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  padding-bottom: 45%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
-}
-.content {
-  background-color: #fff;
-  box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.08);
 }
 </style>
