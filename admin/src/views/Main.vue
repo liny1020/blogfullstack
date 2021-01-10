@@ -7,7 +7,6 @@
       <el-header class="el-header">
         <Header />
       </el-header>
-      <div class="banner"><img src="../assets/main/banner.jpg" alt="" /></div>
       <el-main class="el-main">
         <router-view />
       </el-main>
@@ -20,8 +19,8 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Header from "@/components/Header.vue";
-import Footer from "@/components/Footer.vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 
 @Component({
   components: {
@@ -37,24 +36,14 @@ export default class Home extends Vue {}
   position: fixed;
   z-index: 1;
   width: 100%;
+  // height: unset !important;
   background: #fff;
   padding: 0 30px;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.06);
 }
 .el-main {
-  padding: 0;
-}
-.banner {
-  position: relative;
-  width: 100%;
-  padding-bottom: 45%;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
+  height: 100vh;
+  padding: 60px 0 0;
+  overflow-y: hidden;
 }
 </style>
